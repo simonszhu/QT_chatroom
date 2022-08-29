@@ -8,11 +8,13 @@
 
 ##build
 
-1、首先打开QtChatRoomServer端，找一个机器运行main函数，可以是云服务器（当然如果不是localhost的话，记得一定要是公网IP，不然访问不到）
+1、首先打开QtChatRoomServer端，找一个机器运行main函数，可以是云服务器（当然如果不是localhost的话，记得一定要是公网IP，不然访问不到）前提是mysql部署在了阿里云上
 
-2、修改register_mysql中的IP地址（你的服务器端的ip），在代码中已标识
+2、打开chatroom.h文件，修改里面的ip为自己的目标访问服务器ip，这里是通信ip不是连接mysql服务器的ip（某些情况下可以分离），我这里也是阿里云系统，两个东西部署在一起的
 
-3、运行register_mysql中main函数即可，这里就相当于一个客户端
+3、修改register_mysql中的IP地址（你的服务器端的ip），在代码中已标识
+
+4、运行register_mysql中main函数即可，这里就相当于一个客户端
 
 ##可以优化的点
 
